@@ -1,0 +1,25 @@
+.navbar-container {
+  .logo {
+    width: 55px;
+  }
+
+  .nav-link {
+    color: #000 !important;
+    font-family: Poppins, Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+
+    &:hover {
+      color: #ffc54c !important;
+    }
+
+    &:hover[href*="products"] {
+      color: #85ef8c !important;
+    }
+
+    &:hover[href*="ingredients"] {
+      color: #fb4451 !important;
+    }
+  }
+}

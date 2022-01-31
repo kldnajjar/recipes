@@ -7,6 +7,8 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 
+import "./footer.scss";
+
 const Footer = () => (
   <footer className="footer-container">
     <div className="main-footer widgets-dark typo-light">

@@ -9,8 +9,10 @@ import {
   Image,
 } from "react-bootstrap";
 
+import "./navbar.scss";
+
 const NavbarWrapper = () => {
-  const logo = require("../assets/logo.png");
+  const logo = require("../../assets/logo.png");
 
   return (
     <Navbar bg="light" expand="lg" className="navbar-container">

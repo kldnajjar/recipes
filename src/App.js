@@ -1,8 +1,8 @@
 import { Container } from "react-bootstrap";
 import { Route, Switch, Redirect, BrowserRouter } from "react-router-dom";
 
-import NavbarWrapper from "./components/Navbar";
-import Footer from "./components/Footer";
+import NavbarWrapper from "./components/navbar";
+import Footer from "./components/footer";
 
 import { Recipes, Details } from "./pages/recipes";
 import PageNotFound from "./pages/404";
