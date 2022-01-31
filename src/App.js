@@ -14,22 +14,26 @@ import "./styles/media.scss";
 
 function App() {
   return (
-    <>
-      <NavbarWrapper />
-      <Container className="main-container">
-        <BrowserRouter>
-          <Switch>
-            <Route path="/recipes" render={() => <Recipes />} />
-            <Route path="/details" render={() => <Details />} />
-            <Route exact path="/">
-              <Redirect to="/recipes" />
-            </Route>
-            <Route render={() => <PageNotFound />} />
-          </Switch>
-        </BrowserRouter>
-      </Container>
-      <Footer />
-    </>
+    <div className="main-content">
+      <div>
+        <NavbarWrapper />
+        <Container>
+          <BrowserRouter>
+            <Switch>
+              <Route path="/recipes" render={() => <Recipes />} />
+              <Route path="/details" render={() => <Details />} />
+              <Route exact path="/">
+                <Redirect to="/recipes" />
+              </Route>
+              <Route render={() => <PageNotFound />} />
+            </Switch>
+          </BrowserRouter>
+        </Container>
+      </div>
+      <div>
+        <Footer />
+      </div>
+    </div>
   );
 }
 

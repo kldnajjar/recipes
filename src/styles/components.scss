@@ -1,3 +1,10 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 .navbar-container {
   .logo {
     width: 55px;
@@ -22,10 +29,6 @@
       color: #fb4451 !important;
     }
   }
-}
-
-.main-container {
-  min-height: 60vh;
 }
 
 .footer-container {
