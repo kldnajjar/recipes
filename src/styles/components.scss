@@ -24,11 +24,11 @@
   }
 }
 
-.footer-container {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
+.main-container {
+  min-height: 60vh;
+}
 
+.footer-container {
   .main-footer {
     padding: 20px 0;
     background: #252525;

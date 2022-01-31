@@ -1,6 +1,11 @@
-import { Container, Row, Col, Navbar } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import { Route, Switch, Redirect, BrowserRouter } from "react-router-dom";
+
 import NavbarWrapper from "./components/Navbar";
 import Footer from "./components/Footer";
+
+import { Recipes, Details } from "./pages/recipes";
+import PageNotFound from "./pages/404";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/components.scss";
@@ -11,11 +16,17 @@ function App() {
   return (
     <>
       <NavbarWrapper />
-      <Container>
-        <Navbar fixed="top" />
-        <Row>
-          <Col></Col>
-        </Row>
+      <Container className="main-container">
+        <BrowserRouter>
+          <Switch>
+            <Route path="/recipes" render={() => <Recipes />} />
+            <Route path="/details" render={() => <Details />} />
+            <Route exact path="/">
+              <Redirect to="/recipes" />
+            </Route>
+            <Route render={() => <PageNotFound />} />
+          </Switch>
+        </BrowserRouter>
       </Container>
       <Footer />
     </>

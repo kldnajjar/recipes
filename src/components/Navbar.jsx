@@ -9,7 +9,7 @@ import {
   Image,
 } from "react-bootstrap";
 
-function NavbarWrapper() {
+const NavbarWrapper = () => {
   const logo = require("../assets/logo.png");
 
   return (
@@ -50,6 +50,6 @@ function NavbarWrapper() {
       </Container>
     </Navbar>
   );
-}
+};
 
 export default NavbarWrapper;
