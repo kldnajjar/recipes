@@ -1,0 +1,11 @@
+.recipes-container {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.details-image {
+  height: 400px;
+  object-fit: cover;
+}

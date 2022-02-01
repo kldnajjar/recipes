@@ -17,7 +17,7 @@ function App() {
     <div className="main-content">
       <div>
         <NavbarWrapper />
-        <Container>
+        <Container className="main-container">
           <BrowserRouter>
             <Switch>
               <Route path="/recipes" render={() => <Recipes />} />

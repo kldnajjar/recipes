@@ -1,10 +1,11 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-axios.defaults.baseURL = `${process.env.REACT_APP_API_URL}?${REACT_APP_API_KEY}`;
+axios.defaults.baseURL = `${process.env.REACT_APP_API_URL}`;
 
 axios.interceptors.request.use(
   function (config) {
+    config.params = { apiKey: process.env.REACT_APP_API_KEY };
     config.timeout = 35000;
     return config;
   },
