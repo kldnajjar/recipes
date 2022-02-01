@@ -15,10 +15,10 @@ import "./styles/media.scss";
 function App() {
   return (
     <div className="main-content">
-      <div>
-        <NavbarWrapper />
-        <Container className="main-container">
-          <BrowserRouter>
+      <BrowserRouter>
+        <div>
+          <NavbarWrapper />
+          <Container className="main-container">
             <Switch>
               <Route path="/recipes" render={() => <Recipes />} />
               <Route path="/details" render={() => <Details />} />
@@ -27,12 +27,12 @@ function App() {
               </Route>
               <Route render={() => <PageNotFound />} />
             </Switch>
-          </BrowserRouter>
-        </Container>
-      </div>
-      <div>
-        <Footer />
-      </div>
+          </Container>
+        </div>
+        <div>
+          <Footer />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }

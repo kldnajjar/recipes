@@ -12,9 +12,10 @@ import { useHistory } from "react-router-dom";
 
 import "./navbar.scss";
 
-const NavbarWrapper = () => {
+const NavbarWrapper = (props) => {
   const logo = require("../../assets/logo.png");
   const history = useHistory();
+
   return (
     <Navbar bg="light" expand="lg" className="navbar-container">
       <Container fluid>
