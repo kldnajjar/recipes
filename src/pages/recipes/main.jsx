@@ -6,7 +6,7 @@ import CardWrapper from "../../components/card";
 
 import "./recipes.scss";
 
-const Recipes = () => {
+const Main = () => {
   const [limit, setLimit] = useState(20);
   const [offset, setOffset] = useState(0);
   const [total, setTotal] = useState(0);
@@ -35,4 +35,4 @@ const Recipes = () => {
   );
 };
 
-export default Recipes;
+export default Main;
