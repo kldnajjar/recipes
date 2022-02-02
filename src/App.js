@@ -7,8 +7,10 @@ import Footer from "./components/footer";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer } from "react-toastify";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.css";
 import "./styles/components.scss";
 import "./styles/elements.scss";
 import "./styles/media.scss";
@@ -26,6 +28,7 @@ function App() {
 
   return (
     <div className="main-content">
+      <ToastContainer autoClose={7000} />
       <BrowserRouter>
         <div>
           <NavbarWrapper />

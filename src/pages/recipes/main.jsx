@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
 import { useHistory } from "react-router-dom";
 
 import { getRecipes } from "../../services/recipes";
@@ -28,10 +29,30 @@ const Main = () => {
     });
   };
 
+  const getMoreRecipes = async () => {
+    const offset = results.length;
+    const data = await getRecipes(limit, offset);
+    const obj = [...results, ...data.results];
+
+    setResults(obj);
+  };
+
   return (
-    <div className="recipes-container">
-      {results.map((recipes) => CardWrapper(recipes, recipeHandler))}
-    </div>
+    <InfiniteScroll
+      dataLength={results.length} //This is important field to render the next data
+      next={getMoreRecipes}
+      hasMore={total === results.length ? false : true}
+      loader={<h4>Feed me more</h4>}
+      endMessage={
+        <p style={{ textAlign: "center" }}>
+          <b>Yay! You have seen it all</b>
+        </p>
+      }
+    >
+      <div className="recipes-container">
+        {results.map((recipes) => CardWrapper(recipes, recipeHandler))}
+      </div>
+    </InfiniteScroll>
   );
 };
 

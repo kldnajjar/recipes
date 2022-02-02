@@ -32,20 +32,20 @@ axios.interceptors.response.use(null, (error) => {
     error.message === "net::ERR_CONNECTION_CLOSE" ||
     error.message === "net::ERR_NAME_NOT_RESOLVED" ||
     error.message === "net::ERR_CONNECTION_TIMED_OUT"
-  ) {
+  )
     isNetworkError = true;
-  }
 
   let isRequestTimedOut = false;
   if (error.code && error.code === "ECONNABORTED") isRequestTimedOut = true;
 
-  if (!expectedError && !isRequestTimedOut && !isNetworkError) {
-    toast.error("An expected error occurred");
-  }
-
-  if (isRequestTimedOut) {
+  if (isNetworkError) {
+    toast.error("Netwoek please check the connection");
+  } else if (isRequestTimedOut) {
     toast.error("The request has timed out, try again or send us feedback");
-    return Promise.reject(error);
+  } else if (!expectedError) {
+    toast.error("An expected server error occurred");
+  } else if (expectedError) {
+    toast.error(error.response.data.message);
   }
 
   return Promise.reject(error);
