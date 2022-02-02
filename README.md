@@ -2,9 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Installtion & Setup
 
-In the project directory, you can run:
+Change the API private key
+
+### `Private API Key`
+
+- Open the project using your favorite Code Editor
+- Change the `REACT_APP_API_KEY` in the environment variable files (.env.development, .env.production)
+
+In the project directory, you can run the following commands:
+
+### `npm install`
+
+Will install all the needed dependencies
 
 ### `npm start`
 
