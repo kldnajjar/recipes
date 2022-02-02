@@ -8,12 +8,16 @@ const Details = () => {
 
   const [data, setData] = useState({});
 
-  useEffect(async () => {
-    const id = param.id;
-    if (!id) return;
+  useEffect(() => {
+    async function loadRecipes() {
+      const id = param.id;
+      if (!id) return;
 
-    const data = await getRecipeById(id);
-    setData(data);
+      const data = await getRecipeById(id);
+      setData(data);
+    }
+
+    loadRecipes();
   }, []);
 
   if (!Object.keys(data).length) return null;

@@ -9,3 +9,21 @@
   height: 400px;
   object-fit: cover;
 }
+
+@media only screen and (max-width: 1023px) {
+  .recipes-container {
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .recipes-container {
+    grid-template-columns: 49% 49%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .recipes-container {
+    grid-template-columns: 100%;
+  }
+}

@@ -1,13 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Route, Switch, Redirect, BrowserRouter } from "react-router-dom";
-
-import NavbarWrapper from "./components/navbar";
-import Footer from "./components/footer";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer } from "react-toastify";
+
+import NavbarWrapper from "./components/navbar";
+import Footer from "./components/footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";

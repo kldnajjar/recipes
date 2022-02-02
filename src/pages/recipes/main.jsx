@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useHistory } from "react-router-dom";
-import { Form, FormControl, Button } from "react-bootstrap";
+import { FormControl, Button } from "react-bootstrap";
 
 import { getRecipes } from "../../services/recipes";
 import CardWrapper from "../../components/card";
@@ -15,11 +15,15 @@ const Main = () => {
   const [results, setResults] = useState([]);
   const [search, setSearch] = useState(null);
 
-  useEffect(async () => {
-    const { results, totalResults } = await getRecipes(limit, offset);
+  useEffect(() => {
+    async function loadRecipes() {
+      const { results, totalResults } = await getRecipes(limit, offset);
 
-    setResults(results);
-    setTotal(totalResults);
+      setResults(results);
+      setTotal(totalResults);
+    }
+
+    loadRecipes();
   }, []);
 
   const history = useHistory();
