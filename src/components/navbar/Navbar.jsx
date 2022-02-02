@@ -1,18 +1,9 @@
-import {
-  Navbar,
-  Container,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Image,
-} from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown, Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 import "./navbar.scss";
 
-const NavbarWrapper = (props) => {
+const NavbarWrapper = () => {
   const logo = require("../../assets/logo.png");
   const history = useHistory();
 
@@ -44,15 +35,6 @@ const NavbarWrapper = (props) => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
