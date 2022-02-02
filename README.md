@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Installtion & Setup
+## Setup
 
 Change the API private key
 
@@ -10,6 +10,8 @@ Change the API private key
 
 - Open the project using your favorite Code Editor
 - Change the `REACT_APP_API_KEY` in the environment variable files (.env.development, .env.production)
+
+## Installtion
 
 In the project directory, you can run the following commands:
 
